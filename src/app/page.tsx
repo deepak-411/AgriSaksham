@@ -64,11 +64,17 @@ export default function Home() {
     >
       <div className="flex flex-col min-h-dvh bg-background/80 backdrop-blur-sm">
         <header className="p-4 border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
-          <div className="container mx-auto flex items-center gap-2">
-            <Leaf className="w-6 h-6 text-primary" />
-            <h1 className="text-2xl font-bold font-headline text-foreground">
-              AgriSaksham
-            </h1>
+          <div className="container mx-auto flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Leaf className="w-6 h-6 text-primary" />
+              <h1 className="text-2xl font-bold font-headline text-foreground">
+                AgriSaksham
+              </h1>
+            </div>
+            <div className="text-right">
+              <p className="text-sm font-semibold">SMART INDIA AI AGENT HACKATHON - 2025</p>
+              <p className="text-xs text-muted-foreground">Team: Deep 2.0</p>
+            </div>
           </div>
         </header>
 
@@ -106,6 +112,7 @@ export default function Home() {
                       </span>
                       <CardTitle>Mobile First & Offline Ready</CardTitle>
                     </div>
+
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-center">
                     <p className="text-muted-foreground">
@@ -123,7 +130,7 @@ export default function Home() {
         <footer className="p-4 border-t bg-card">
           <div className="container mx-auto text-center text-sm text-muted-foreground">
             <p>
-              &copy; {new Date().getFullYear()} AgriSaksham. All rights
+              Project Lead: Deepak Kumar | &copy; {new Date().getFullYear()} AgriSaksham. All rights
               reserved.
             </p>
           </div>
