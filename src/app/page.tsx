@@ -73,7 +73,7 @@ export default function Home() {
             </div>
             <div className="text-right">
               <p className="text-sm font-semibold">SMART INDIA AI AGENT HACKATHON - 2025</p>
-              <p className="text-xs text-muted-foreground">Team: Deep 2.0</p>
+              <p className="text-xs text-muted-foreground">Team: Deep 2.0 | Project Lead: Deepak Kumar</p>
             </div>
           </div>
         </header>
@@ -130,7 +130,7 @@ export default function Home() {
         <footer className="p-4 border-t bg-card">
           <div className="container mx-auto text-center text-sm text-muted-foreground">
             <p>
-              Project Lead: Deepak Kumar | &copy; {new Date().getFullYear()} AgriSaksham. All rights
+              &copy; {new Date().getFullYear()} AgriSaksham. All rights
               reserved.
             </p>
           </div>
