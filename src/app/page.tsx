@@ -55,69 +55,80 @@ const features = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-dvh bg-background">
-      <header className="p-4 border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto flex items-center gap-2">
-          <Leaf className="w-6 h-6 text-primary" />
-          <h1 className="text-2xl font-bold font-headline text-foreground">
-            AgriSaksham
-          </h1>
-        </div>
-      </header>
+    <div
+      className="flex flex-col min-h-dvh bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('https://picsum.photos/1920/1080')`,
+      }}
+      data-ai-hint="rice paddy"
+    >
+      <div className="flex flex-col min-h-dvh bg-background/80 backdrop-blur-sm">
+        <header className="p-4 border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
+          <div className="container mx-auto flex items-center gap-2">
+            <Leaf className="w-6 h-6 text-primary" />
+            <h1 className="text-2xl font-bold font-headline text-foreground">
+              AgriSaksham
+            </h1>
+          </div>
+        </header>
 
-      <main className="flex-1">
-        <section className="py-12 md:py-16 text-center bg-card">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-5xl font-bold font-headline text-primary">
-              Empowering Rural India with AI
-            </h2>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-              Your AI-powered companion for smarter farming, financial guidance,
-              and sustainable growth.
+        <main className="flex-1">
+          <section className="py-12 md:py-16 text-center bg-card/50">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl md:text-5xl font-bold font-headline text-primary">
+                Empowering Rural India with AI
+              </h2>
+              <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+                Your AI-powered companion for smarter farming, financial
+                guidance, and sustainable growth.
+              </p>
+            </div>
+          </section>
+
+          <section className="py-12 md:py-16">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature) => (
+                  <FeatureCard
+                    key={feature.title}
+                    icon={feature.icon}
+                    title={feature.title}
+                    description={feature.description}
+                  >
+                    {feature.component}
+                  </FeatureCard>
+                ))}
+                <Card className="h-full flex flex-col">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <span className="bg-primary/10 text-primary p-3 rounded-full">
+                        <Smartphone className="w-8 h-8" />
+                      </span>
+                      <CardTitle>Mobile First & Offline Ready</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="flex-1 flex flex-col justify-center">
+                    <p className="text-muted-foreground">
+                      Designed for accessibility in rural areas, our platform is
+                      optimized for mobile and includes offline capabilities to
+                      ensure you have critical information anytime, anywhere.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer className="p-4 border-t bg-card">
+          <div className="container mx-auto text-center text-sm text-muted-foreground">
+            <p>
+              &copy; {new Date().getFullYear()} AgriSaksham. All rights
+              reserved.
             </p>
           </div>
-        </section>
-
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature) => (
-                <FeatureCard
-                  key={feature.title}
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                >
-                  {feature.component}
-                </FeatureCard>
-              ))}
-              <Card className="h-full flex flex-col">
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <span className="bg-primary/10 text-primary p-3 rounded-full">
-                      <Smartphone className="w-8 h-8" />
-                    </span>
-                    <CardTitle>Mobile First & Offline Ready</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex-1 flex flex-col justify-center">
-                  <p className="text-muted-foreground">
-                    Designed for accessibility in rural areas, our platform is
-                    optimized for mobile and includes offline capabilities to
-                    ensure you have critical information anytime, anywhere.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="p-4 border-t bg-card">
-        <div className="container mx-auto text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} AgriSaksham. All rights reserved.</p>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 }
