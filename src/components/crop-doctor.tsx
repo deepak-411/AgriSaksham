@@ -23,6 +23,8 @@ import {
 import { Loader2 } from 'lucide-react';
 import Image from 'next/image';
 
+const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/jpg", "image/png", "image/webp"];
+
 const formSchema = z.object({
   photo:
     typeof window === 'undefined'
@@ -31,8 +33,8 @@ const formSchema = z.object({
           .instanceof(FileList)
           .refine((files) => files?.length === 1, 'Image is required.')
           .refine(
-            (files) => files?.[0]?.type.startsWith('image/'),
-            'Must be an image file.'
+            (files) => ACCEPTED_IMAGE_TYPES.includes(files?.[0]?.type),
+            'Unsupported file format. Please use JPEG, PNG, or WEBP.'
           )
           .refine(
             (files) => files?.[0]?.size <= 5000000,
@@ -98,7 +100,7 @@ export function CropDoctor() {
                 <FormControl>
                   <Input
                     type="file"
-                    accept="image/*"
+                    accept="image/png, image/jpeg, image/webp"
                     {...fileRef}
                     onChange={(e) => {
                       field.onChange(e.target.files);
