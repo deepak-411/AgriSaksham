@@ -66,11 +66,11 @@ AgriSaksham leverages **AI + IoT + Government Data** to build a **smart rural su
 
 ## 👥 Team Structure – Deep 2.0  
 - **Deepak Kumar** – Project Lead / AI Developer  
-- Team Members: (Add names/roles)  
-  - Data Analyst  
-  - Frontend Developer  
-  - UI/UX Designer  
-  - Domain Expert (Agriculture)  
+  
+ - **Deepak Kumar** - Data Analyst  
+- **Deepak Kumar**  - Frontend Developer  
+- **Deepak Kumar**  - UI/UX Designer  
+ - **Deepak Kumar** - Domain Expert (Agriculture)  
 
 ---
 
@@ -85,7 +85,7 @@ AgriSaksham leverages **AI + IoT + Government Data** to build a **smart rural su
 ## 📲 Social Media & Links  
 - Live Agent Demo: [AgriSaksham](https://app.ashna.ai/chat?agent=agrisaksham-uu6Oo)  
 - Education Agent: [Education Baba](https://app.ashna.ai/chat?agent=education-baba-BVw0r)  
-- Instagram: *(Attach follow screenshot)*  
+
 
 ---
 
